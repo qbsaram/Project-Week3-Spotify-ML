@@ -2,9 +2,6 @@
 ###############General#################
 import pandas as pd
 
-############WebScraping#############
-
-
 #############Spotify#################
 import spotipy
 from spotipy.oauth2 import SpotifyClientCredentials
@@ -133,6 +130,12 @@ def get_all_information_about_song(song_name):
     song = sp.search(q=song_name, limit=1)
     return song
 
+
+def get_artists_name_from_song(song_name):
+    song_information = get_all_information_about_song(song_name)
+    Artist_Names = song_information["tracks"]["items"][0]["artists"][0]["name"]
+    return Artist_Names
+
 ##################### Function to get id of a song ##############################
 #'''Text'''
 #def get_song_id(song_name):
@@ -150,9 +153,3 @@ def get_all_information_about_song(song_name):
 #def get_artists_from_playlist(playlist_id):
 #    tracks_from_playlist = get_playlist_tracks("spotify", playlist_id)
 #    return list(set(artist for subset in [get_artists_from_track(track["track"]) for track in tracks_from_playlist] for artist in subset))
-
-def get_artists_name_from_song(song_name):
-    song_information = get_all_information_about_song(song_name)
-    Artist_Names = song_information["tracks"]["items"][0]["artists"][0]["name"]
-    return Artist_Names
-
