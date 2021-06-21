@@ -1,0 +1,29 @@
+#print(response.status_code) 
+#200 is Succeess, 1xx Informational responses, 3xx is Redirection, 4xx is Client Errors, 5xx is Server errors
+#
+#
+#
+#Song_Names = top_100_song_titles
+#
+#Artist_Names
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
